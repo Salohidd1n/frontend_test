@@ -5,7 +5,9 @@ const Table = ({ data, columns, total }) => {
   const router = useRouter()
   const pathname = usePathname()
   const onChange = (_, page) => {
-    router.replace(`${pathname}?limit=10&page=${page}`)
+    router.replace(`${pathname}?limit=10&page=${page}`, {
+      scroll: false
+    })
   }
 
   return (
