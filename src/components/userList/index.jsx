@@ -2,15 +2,18 @@
 
 import { useRouter } from 'next/navigation'
 import Table from '../table'
+import Image from 'next/image'
 
 const columns = [
   {
     key: 'image',
     render: (item) => (
       <div className='w-[50px] h-[50px] mx-auto'>
-        <img
-          className='object-contain h-full w-full'
+        <Image
+          className='object-contain'
           src={item.image}
+          width='50'
+          height='50'
           alt={item.firstName}
         />
       </div>
